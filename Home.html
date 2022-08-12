@@ -102,7 +102,7 @@
         </div>
         </div>
     </div>
-    <div class="section-two">
+<div class="section-two">
         <div class="inside-infrom">
         <div class="left-side-inform">
             <div class="About">ABOUT</div>
@@ -130,7 +130,7 @@
             </div>
         </div>
         </div>
-    <div class="section-three">
+<div class="section-three">
         <div class="section-three-inside-inform">
             <!--our sevice tittle-->
             <div id="section-three-main-tittle">OUR SERVICE</div>
@@ -166,22 +166,19 @@
             </div>
         </div>
     </div>
-    <div class="section-four">
+<div class="section-four">
         <div class="four-main-tittle">PORTFOLIO</div>
-        <div class="four-inform">
-            <div class="side-bar">
-                <button class="gallery-controls-previous"></button>
-                <button class="gallery-controls-next"></button>
-            </div>
-            <div class="inform">
+        <div class="gallery">
+            <div class="gallery-controls"></div>
+            <div class="gallery-container">
             <!--00001-->
-                <div class="inform-one item-selected">
+                <div class="gallery-item gallery-item-1" data-index="1">
                 <div class="text-text">
                 <div class="text-inform-four">RESEDENTIALS</div>
                 <div class="line-box"></div>
                 <p>Tailor-made projects for individual sites or homes of any size, according to the ideas and styles of future residents.</p>
                 </div>
-                <a href="residentials.html" target="_self" style=width:400px;height: 450px >
+                <a href="residentials.html" target="_self">
                 <div class="pic-one-inform">
                         <img src="picture/4-2-570x570.jpg">
                         <div id="boxes"></div>
@@ -193,13 +190,13 @@
                 </a>
                 </div>  
             <!--00002-->
-                <div class="inform-one item-selected">
+                <div class="gallery-item gallery-item-2" data-index="2">
                 <div class="text-text">
                 <div class="text-inform-four">CORPORATE OFFICE</div>
                 <div class="line-box"></div>
                 <p2>According to functional requirements and planning workspace.</p2>
                 </div>
-                    <a href="#corporate" target="_self" style=width:400px;height: 450px >
+                    <a href="#corporate" target="_self">
                     <div class="pic-one-inform"><img src="picture/1-1-570x570.jpg">
                         <div id="boxes"></div>
                         <div class="click">
@@ -210,7 +207,7 @@
                 </a>
                 </div>
             <!--00003-->
-                <div class="inform-one item-selected">
+                <div class="gallery-item gallery-item-3" data-index="3">
                     <div class="text-text">
                     <div class="text-inform-four">CORMMERCIAL</div>
                     <div class="line-box"></div>
@@ -345,5 +342,6 @@ const raf = () => {
 requestAnimationFrame(raf);
 window.addEventListener('scroll', scrollInProgress)
     </script>
+    <script src="css/carousel.js"></script>
 </html>
 
