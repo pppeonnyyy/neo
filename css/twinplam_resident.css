@@ -219,7 +219,10 @@ body {
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
+<<<<<<< HEAD
     justify-content: center;
+=======
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
 }
 .picture img{
     margin: 45px 118px;
@@ -231,7 +234,11 @@ body {
     object-fit: cover;
 }
 .picture img:nth-of-type(2), .picture img:nth-of-type(3){
+<<<<<<< HEAD
     width: 34%;
+=======
+    width: 35%;
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
     object-fit: cover;
 }
 /*--sec three end--*/
@@ -284,11 +291,16 @@ main {
 #arrow-next a{
     position: absolute;
     margin-top: 25%;
+<<<<<<< HEAD
     margin-left: 77%;
+=======
+    margin-left: 80%;
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
     font-size: 25px;
     text-decoration: none;
     color: white;
     text-transform: capitalize;
+<<<<<<< HEAD
     letter-spacing: 2px;
 }
 .arrow{
@@ -304,6 +316,16 @@ main {
     margin-top: -30px;
     margin-left: 80px;
 }
+=======
+}
+.arrow{
+    width: 20px;
+    height: 200px;
+    position: absolute;
+    margin-top: -60px;
+    transform: rotate(-90deg);
+}
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
 .wrap{
   width: 100%;
     height: auto;
@@ -451,8 +473,12 @@ textarea {
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
               0 1px 1px 0 rgba(0,0,0,0.09);
 
+<<<<<<< HEAD
 /*---footer end---*/
 
     @media only screen and (max-width:1063px){
         
     }
+=======
+/*---footer end---*/
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab

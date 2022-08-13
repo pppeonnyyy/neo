@@ -249,9 +249,14 @@ span{
               margin: 2%;  
             }
             .text{
+<<<<<<< HEAD
                 margin-top: 10px;
                 font-size: 20px;
                 color:rgb(87,85,86);
+=======
+                margin-top: 3px;
+                font-size: 20px;
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
             }
             .four-pic img{
                 width: 250px;
@@ -284,6 +289,7 @@ span{
             }
             /*---section three end---*/
 /*---section four---*/
+<<<<<<< HEAD
 .section-four{
     display: flex;
     flex-direction: column;
@@ -292,11 +298,36 @@ span{
     overflow: hidden;
     width: 100%;
     height:auto;
+=======
+            .section-four{
+                display: flex;
+                flex-direction: column;
+                font-family: sans-serif;
+                color: rgb(87,85,86);
+                overflow: hidden;
+                width: 100%;
+                height:auto;
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
             }
 .four-main-tittle{
     font-size: 55px;
     margin: 150px 150px 50px 150px;
             }
+<<<<<<< HEAD
+=======
+.four-inform{
+    width: 100%;
+    height: 80%;
+}
+.side-bar{
+    display: flex;
+    background-color: aquamarine;
+    width: 80%;
+    height: 100px;
+    position: absolute;
+    margin-left: 150px;
+}
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
 .gallery-controls button {
   background-color: transparent;
   border: 0;
@@ -306,9 +337,20 @@ span{
   padding: 0 12px;
   text-transform: capitalize;
 }
+<<<<<<< HEAD
 .gallery-controls-previous {
   position: relative;
 }
+=======
+.gallery-controls button:focus {
+  outline: none;
+}
+
+.gallery-controls-previous {
+  position: relative;
+}
+
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
 .gallery-controls-previous::before {
   border: solid #000;
   border-width: 0 2px 2px 0;
@@ -327,9 +369,17 @@ span{
 .gallery-controls-previous:hover::before {
   left: -18px;
 }
+<<<<<<< HEAD
 .gallery-controls-next {
   position: relative;
 }
+=======
+
+.gallery-controls-next {
+  position: relative;
+}
+
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
 .gallery-controls-next::before {
   border: solid #000;
   border-width: 0 2px 2px 0;
@@ -344,20 +394,67 @@ span{
   transition: right 0.15s ease-in-out;
   width: 4px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
 .gallery-controls-next:hover::before {
   right: -18px;
 }
 /*---button end---*/
+<<<<<<< HEAD
 /*--盒子內的text或inform--*/
+=======
+.inform{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 150px;
+    padding-bottom: 150px;
+            }
+.inform-one{
+    width: 400px;
+    height: 600px;
+}
+.inform-one-1{
+    left: 15%;
+  opacity: .4;
+  transform: translateX(-50%);
+}
+.inform-one-2 {
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+.inform-one-3 {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  height: 300px;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  z-index: 2;
+}
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
 .text-text{
     display: flex;
     align-items: center;
     flex-direction: column;
+<<<<<<< HEAD
     width: 400px;
 }
 .text-inform-four{
     font-size: 30px;
     padding-bottom: 25px;
+=======
+}
+.text-inform-four{
+    font-size: 30px;
+    padding-bottom: 15px;
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
 }
 .line-box{
     background-color:rgb(87,85,86);
@@ -387,7 +484,11 @@ span{
     background-color: rgb(87,85,86);
     box-sizing: border-box;
     height: 99%;
+<<<<<<< HEAD
     width: 400px;
+=======
+    width: 100%;
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
     position: absolute;
     margin-top: -454px;
     opacity: 0;
@@ -417,6 +518,7 @@ span{
 .pic-one-inform:hover .click{
     opacity: 1;
 }
+<<<<<<< HEAD
 /*--盒子內的text或inform end--*/
 .gallery {
   width: 100%;
@@ -507,6 +609,8 @@ padding: 0 150px;
     width: 150px;
     height: 150px;
 }
+=======
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
 /*---section four end---*/
 
 
@@ -1412,8 +1516,13 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
         margin-top: 20px;
     }
     #big-tittle{
+<<<<<<< HEAD
         width: 70%;
         font-size: 27px; 
+=======
+        width: 80%;
+        font-size: 30px; 
+>>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
     }
     #small-tittle{
         margin-left: 0px;
