@@ -5,14 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Neo Interior SDN BHD</title>
         <meta name="description" content="An interactive getting started guide for Brackets.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/menu%20mobile.css">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
         <script src="https://kit.fontawesome.com/18440a5af0.js" crossorigin="anonymous"></script>
         <style>
         </style>
      </head>
 <body>
+     <link rel="stylesheet" href="css/menu%20mobile.css">
     <link rel="stylesheet" href="css/main%20page%20style.css">
  <header>
      <!--nav bar-->
@@ -83,11 +82,24 @@
      </nav>
     </header>
     <div id="container-firstpage-mainview">
-<div class="section-one">
+<div class="section-one appear2">
     <div class="details-section-one">
-        <div class="side-picture">
-            <img src="picture/1.-1536x864.jpg">
-        </div>
+       <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="picture/1.-1536x864.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img src="picture/2-1536x864.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img src="picture/3-1536x864.jpg">
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+</div>
         <div class="Tittle">
             <div id="tittle-square"><div class="Neo Interior Studio">NEO INTERIOR SDN BHD</div>
             </div>
@@ -102,11 +114,7 @@
         </div>
         </div>
     </div>
-<<<<<<< HEAD
-<div class="section-two">
-=======
-    <div class="section-two">
->>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
+    <div class="section-two appear2">
         <div class="inside-infrom">
         <div class="left-side-inform">
             <div class="About">ABOUT</div>
@@ -134,11 +142,7 @@
             </div>
         </div>
         </div>
-<<<<<<< HEAD
-<div class="section-three">
-=======
-    <div class="section-three">
->>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
+    <div class="section-three appear2">
         <div class="section-three-inside-inform">
             <!--our sevice tittle-->
             <div id="section-three-main-tittle">OUR SERVICE</div>
@@ -174,36 +178,21 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-<div class="section-four">
+<div class="section-four appear2">
         <div class="four-main-tittle">PORTFOLIO</div>
         <div class="gallery">
-            <div class="gallery-controls"></div>
+            <div class="gallery-controls">
+                <button class="gallery"></button>
+            </div>
             <div class="gallery-container">
             <!--00001-->
                 <div class="gallery-item gallery-item-1" data-index="1">
-=======
-    <div class="section-four">
-        <div class="four-main-tittle">PORTFOLIO</div>
-        <div class="four-inform">
-            <div class="side-bar">
-                <button class="gallery-controls-previous"></button>
-                <button class="gallery-controls-next"></button>
-            </div>
-            <div class="inform">
-            <!--00001-->
-                <div class="inform-one item-selected">
->>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
                 <div class="text-text">
                 <div class="text-inform-four">RESEDENTIALS</div>
                 <div class="line-box"></div>
                 <p>Tailor-made projects for individual sites or homes of any size, according to the ideas and styles of future residents.</p>
                 </div>
-<<<<<<< HEAD
                 <a href="residentials.html" target="_self">
-=======
-                <a href="residentials.html" target="_self" style=width:400px;height: 450px >
->>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
                 <div class="pic-one-inform">
                         <img src="picture/4-2-570x570.jpg">
                         <div id="boxes"></div>
@@ -215,21 +204,13 @@
                 </a>
                 </div>  
             <!--00002-->
-<<<<<<< HEAD
                 <div class="gallery-item gallery-item-2" data-index="2">
-=======
-                <div class="inform-one item-selected">
->>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
                 <div class="text-text">
                 <div class="text-inform-four">CORPORATE OFFICE</div>
                 <div class="line-box"></div>
                 <p2>According to functional requirements and planning workspace.</p2>
                 </div>
-<<<<<<< HEAD
                     <a href="#corporate" target="_self">
-=======
-                    <a href="#corporate" target="_self" style=width:400px;height: 450px >
->>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
                     <div class="pic-one-inform"><img src="picture/1-1-570x570.jpg">
                         <div id="boxes"></div>
                         <div class="click">
@@ -240,11 +221,7 @@
                 </a>
                 </div>
             <!--00003-->
-<<<<<<< HEAD
                 <div class="gallery-item gallery-item-3" data-index="3">
-=======
-                <div class="inform-one item-selected">
->>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
                     <div class="text-text">
                     <div class="text-inform-four">CORMMERCIAL</div>
                     <div class="line-box"></div>
@@ -262,7 +239,9 @@
                 </div>
             </div>
         </div>
-        </div>
+    <div class="mobile-gallery">
+    </div>
+            </div>
     <div class="section-five">
         <div class="contact-us-bar">
             <div class="main-tittile-five">CONTACT<br>US</div>
@@ -325,6 +304,7 @@
                     </div>
                 </div>
             </div>
+    </div>
         <!--section five-->
     <footer>
            <div class="footer-inform">
@@ -354,7 +334,6 @@
             </div>
           </div>
         </footer>
-    </div>
 </body>
     
     <script>
@@ -379,9 +358,51 @@ const raf = () => {
 requestAnimationFrame(raf);
 window.addEventListener('scroll', scrollInProgress)
     </script>
-<<<<<<< HEAD
+    <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    <script>
+    const items = document.querySelectorAll('.appear2');
+
+const active = function(entries){
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+        entry.target.classList.add('inview2'); 
+        }else{
+            entry.target.classList.remove('inview2'); 
+        }
+    });
+}
+const io2 = new IntersectionObserver(active);
+ for(let i=0; i < items.length; i++){
+    io2.observe(items[i]);
+ }
+    </script>
     <script src="css/carousel.js"></script>
-=======
->>>>>>> e9278a9c9e3c91ca05d11e7214b418b2ebc4adab
 </html>
 

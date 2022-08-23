@@ -106,8 +106,8 @@ we build and create to real.</p>
 <div class="container">
             <!---放作品的地方--->
             <!--001-->
-    <div class="block">
-            <a href=Residentials-TwinPlam.html>
+    <div class="block appear2">
+            <a href="Residentials-TwinPlam.html">
             <div class="box"></div>
             <!---arrow der--->
             <div class="arrow-scoll-down-white">
@@ -127,7 +127,7 @@ we build and create to real.</p>
             <p>TWIN PALMS, SG LONG<br> RESIDENTIAL – SEMI D</p>
             </div>
                 <!--002-->
-    <div class="block">
+    <div class="block appear2">
             <a href=#KL>
             <div class="box"></div>
             <!---arrow der--->
@@ -148,7 +148,7 @@ we build and create to real.</p>
                 <p>Kuala lumpur</p>
                 </div>
                 <!--003-->
-    <div class="block">
+    <div class="block appear2">
                 <a href=#Bangsa>
             <div class="box"></div>
             <!---arrow der--->
@@ -263,8 +263,7 @@ document.addEventListener("scroll", function(){
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    
-    <script>
+<script>
         $(document).ready(function () {
             $(".block").slice(0, 2).show();
             if ($(".block:hidden").length != 0) {
@@ -279,5 +278,22 @@ document.addEventListener("scroll", function(){
                 }
             });
         })
+    </script>
+     <script>
+    const items = document.querySelectorAll('.appear2');
+
+const active = function(entries){
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+        entry.target.classList.add('inview2'); 
+        }else{
+            entry.target.classList.remove('inview2'); 
+        }
+    });
+}
+const io2 = new IntersectionObserver(active);
+ for(let i=0; i < items.length; i++){
+    io2.observe(items[i]);
+ }
     </script>
 </html>

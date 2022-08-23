@@ -5,17 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Neo Interior Studio Service</title>
         <meta name="description" content="An interactive getting started guide for Brackets.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <script src="https://kit.fontawesome.com/18440a5af0.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/menu%20mobile.css">
         <style>
         </style>
 </head>
 <body>
+    <link rel="stylesheet" href="css/menu%20mobile.css">
+    <link rel="stylesheet" href="css/twinplam_resident.css">
     <div class="img-back">
     <img src="picture/residentials/Twinpalm/resident.jpg">
     </div>
-    <link rel="stylesheet" href="css/twinplam_resident.css">
     <header>
             <!--nav bar-->
     <nav class="navbar">
@@ -153,10 +153,27 @@
     </div>
   </main>
 </div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+    
+  <img src="picture/residentials/Twinpalm/IMG-20200312-WA0007.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img src="picture/residentials/Twinpalm/IMG-20200312-WA0013.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img src="picture/residentials/Twinpalm/IMG-20200312-WA0005.jpg">
+</div>
+<a class="prev" onclick="plusSlides(-1)"><img src="picture/arrow-03.png"></a>
+<a class="next" onclick="plusSlides(1)"><img src="picture/arrow-04.png"></a>
+</div>
     <div class="desginer">
     <div class="designer-comment">
         <img src="picture/small%20circle.png">
-        <h1>Designer name</h1>
+        <p>Designer name</p>
         <p>" content "</p>
         </div>
     </div>
@@ -232,13 +249,10 @@
               </div>
             </div>
           </div>
-        </footer> 
+        </footer>
 </body>
+    
     <script>
-        /**
-* By Alvaro Trigo 
-* Follow me on Twitter: https://twitter.com/imac2
-*/
 (function(){
     init();
 
@@ -284,4 +298,33 @@
     }
 })();
     </script>
+    <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    
 </html>

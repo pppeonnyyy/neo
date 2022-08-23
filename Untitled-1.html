@@ -15,91 +15,96 @@
     </script>
   
     <style>
-        h1 {
-            color: #3C8E3D;
-        }
-  
-        .block {
-            display: none;
-            font-size: 20px;
-        }
-  
-        #load {
-            font-size: 20px;
-            color: green;
-        }
+       
     </style>
 </head>
   
 <body>
-    <h1 align="center">
-        <b> GeeksforGeeks <br>
-            <u>Load more function</u>
-        </b>
-    </h1>
-  
-    <div class="container">
-        <div class="block">
-            <img src="picture/1-1-570x570.jpg">
-        </div>
-  
-        <div class="block">
-            <img src="picture/1.-1536x864.jpg">
-            The base value is index 0 and the 
-            difference between the two indexes is 
-            the offset. For simplicity, we can
-            think of an array as a fleet of stairs 
-            where on each step is placed a value 
-            (let’s say one of your friends). Here, 
-            you can identify the location of any of 
-            your friends by simply knowing the count 
-            of the step they are on.
-        </div>
-  <div class="block">
-            In C language, array has a fixed size 
-            meaning once the size is given to it, 
-            it cannot be changed i.e. you can’t
-            shrink it neither can you expand it. 
-            The reason was that for expanding, if 
-            we change the size we can’t be sure
-            ( it’s not possible every time) that we 
-            get the next memory location to us as free.
-        </div>
-        <div class="block">
-            In C language, array has a fixed size 
-            meaning once the size is given to it, 
-            it cannot be changed i.e. you can’t
-            shrink it neither can you expand it. 
-            The reason was that for expanding, if 
-            we change the size we can’t be sure
-            ( it’s not possible every time) that we 
-            get the next memory location to us as free.
-        </div>
-  
-        <div class="block"> <br>
-            Types of indexing in an array: <br>
-            0 (zero-based indexing) <br>
-            1 (one-based indexing) <br>
-            n (n-based indexing)
-        </div>
-    </div>
-    <div id="load"> <b> Load More </b></div>
-  
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="data1/images/cat1183086.jpg" alt="Cat" title="Cat" id="wows1_0"/>Cats are believed to have nine lives</li>
+		<li><img src="data1/images/raccoon365366.jpg" alt="Raccoon" title="Raccoon" id="wows1_1"/>Raccoons are also kept as pets</li>
+		<li><img src="data1/images/redpanda1182069.jpg" alt="Red Panda" title="Red Panda" id="wows1_2"/>Red Pandas feed mainly on bamboo</li>
+		<li><img src="data1/images/zoo1065226.jpg" alt="Fennec fox" title="Fennec fox" id="wows1_3"/>Its distinctive feature is its large ears</li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="Cat"><span><img src="data1/tooltips/cat1183086.jpg" alt="Cat"/>1</span></a>
+		<a href="#" title="Raccoon"><span><img src="data1/tooltips/raccoon365366.jpg" alt="Raccoon"/>2</span></a>
+		<a href="#" title="Red Panda"><span><img src="data1/tooltips/redpanda1182069.jpg" alt="Red Panda"/>3</span></a>
+		<a href="#" title="Fennec fox"><span><img src="data1/tooltips/zoo1065226.jpg" alt="Fennec fox"/>4</span></a>
+	</div></div>
+<div class="ws_shadow"></div>
+</div>
+    
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
     <script>
-        $(document).ready(function () {
-            $(".block").slice(0, 2).show();
-            if ($(".block:hidden").length != 0) {
-                $("#load").show();
-            }
-            $("#load").on("click", function (e) {
-                e.preventDefault();
-                $(".block:hidden").slice(0, 1).slideDown();
-                if ($(".block:hidden").length == 0) {
-                    $("#load").text("No More to view")
-                        .fadOut("slow");
+       // HERO SLIDER
+    var menu = [];
+    jQuery('.swiper-slide').each( function(index){
+        menu.push( jQuery(this).find('.slide-inner').attr("data-text") );
+    });
+    var interleaveOffset = 0.5;
+    var swiperOptions = {
+        loop: true,
+        speed: 1000,
+        parallax: true,
+        autoplay: {
+            delay: 6500,
+            disableOnInteraction: false,
+        },
+        watchSlidesProgress: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        on: {
+            progress: function() {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    var slideProgress = swiper.slides[i].progress;
+                    var innerOffset = swiper.width * interleaveOffset;
+                    var innerTranslate = slideProgress * innerOffset;
+                    swiper.slides[i].querySelector(".slide-inner").style.transform =
+                    "translate3d(" + innerTranslate + "px, 0, 0)";
+                }      
+            },
+
+            touchStart: function() {
+              var swiper = this;
+              for (var i = 0; i < swiper.slides.length; i++) {
+                swiper.slides[i].style.transition = "";
+              }
+            },
+
+            setTransition: function(speed) {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = speed + "ms";
+                    swiper.slides[i].querySelector(".slide-inner").style.transition =
+                    speed + "ms";
                 }
-            });
-        })
+            }
+        }
+    };
+
+    var swiper = new Swiper(".swiper-container", swiperOptions);
+
+    // DATA BACKGROUND IMAGE
+    var sliderBgSetting = $(".slide-bg-image");
+    sliderBgSetting.each(function(indx){
+        if ($(this).attr("data-background")){
+            $(this).css("background-image", "url(" + $(this).data("background") + ")");
+        }
+    });
+
+
     </script>
 </body>
   
