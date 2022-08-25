@@ -81,7 +81,7 @@
         </div>
      </nav>
         </header>
-        <div class="container-about-us">
+        <div class="container-about-us appear2">
             <!--左邊第一個column-->
             <div class="arrow-scoll-down">
             <!--scroll down move-->
@@ -107,7 +107,7 @@
             </div>
         </div>
         <!---section one---->
-        <div class="section-one">
+        <div class="section-one appear2">
             <div class="sec-one-style">
             <div class="inform-word">
                 We offer a complete range of high-end interior design & decoration services for commercial and residential projects. With a team of highly skilled & experienced professionals, we are equipped to undertake interior design & renovation projects of any size. 
@@ -133,7 +133,7 @@
         </div>
         <!---section one--->
         <!---section two--->
-        <div class="section-two-about-us">
+        <div class="section-two-about-us appear2">
             <div class="inform-about-us">
                 <div class="right-side-pic-about">
                     <img src="picture/circle-05.png" class="circle">
@@ -152,7 +152,7 @@ clients enables us to provide the right solutions for each project. </p>
         </div>
         <!---section two--->
         <!---section three---plan head-->
-        <div class="section-three-about">
+        <div class="section-three-about appear2">
             <div class="line-three-about"></div>
             <div class="inform-three-about">
                 <p>planing ahead</p>
@@ -263,4 +263,21 @@ document.addEventListener("DOMContentLoaded", () => {
  counterAnim("#count3", 300, 10, 2000);
  counterAnim("#count4", 500, 10, 2500);
 });</script>
+     <script>
+    const items = document.querySelectorAll('.appear2');
+
+const active = function(entries){
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+        entry.target.classList.add('inview2'); 
+        }else{
+            entry.target.classList.remove('inview2'); 
+        }
+    });
+}
+const io2 = new IntersectionObserver(active);
+ for(let i=0; i < items.length; i++){
+    io2.observe(items[i]);
+ }
+    </script>
 </html>
