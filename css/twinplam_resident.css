@@ -896,7 +896,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     }
     .proj-sum{
         padding: 5%;
-        width: 95%;
+        width: 90%;
     }
     .inform p:nth-of-type(1){
         font-size: 20px;
@@ -938,10 +938,15 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     }
     .prev{
         margin-top: -100px;
+        left: 5%;
     }
     .next{
         margin-top: -100px;
         margin-left: 270px;
+        left: -3%
+    }
+    .prev, .next{
+        width: 25%;
     }
     /*---slide 425px end---*/
     /*---comment 425px---*/

@@ -83,8 +83,8 @@
     </header>
     <div id="container-firstpage-mainview">
 <div class="section-one appear2">
-    <div class="details-section-one">
-       <div class="slideshow-container">
+<div class="details-section-one">
+<div class="slideshow-container">
 
 <div class="mySlides fade">
   <img src="picture/1.-1536x864.jpg">
@@ -239,7 +239,38 @@
                 </div>
             </div>
         </div>
+    
     <div class="mobile-gallery">
+         <div class="slideshow-portfolioSlide">
+<div class="portfolioSlide fade">
+     <div class="text-text">
+                <div class="text-inform-four">RESEDENTIALS</div>
+                <div class="line-box"></div>
+                <p>Tailor-made projects for individual sites or homes of any size, according to the ideas and styles of future residents.</p>
+                </div>
+  <img src="picture/1-1-570x570.jpg">
+</div>
+
+<div class="portfolioSliide fade">
+    <div class="text-text">
+                <div class="text-inform-four">CORPORATE OFFICE</div>
+                <div class="line-box"></div>
+                <p2>According to functional requirements and planning workspace.</p2>
+                </div>
+  <img src="picture/2-1536x864.jpg">
+</div>
+
+<div class="portfolioSlide fade">
+    <div class="text-text">
+                    <div class="text-inform-four">CORMMERCIAL</div>
+                    <div class="line-box"></div>
+                    <p>For large-scale commercial environments, hotels, clubs and other large-scale environments, we provide tailor-made supply of engineering and furniture.</p>
+                    </div>
+  <img src="picture/4-1.jpg">
+</div>
+<a class="prev" onclick="plusSlides(-1)"><img src="picture/arrow-04.png"></a>
+<a class="next" onclick="plusSlides(1)"><img src="picture/arrow-04.png"></a>
+</div>
     </div>
             </div>
     <div class="section-five">
@@ -281,21 +312,21 @@
                 <!----contact inform end--->
                     <div class="map-inform-our">
                     <div class="group-our-contact">
-                        <div class="inform-icon-location" style="display: flex">
-                        <i class="fa-solid fa-location-dot" style="margin-right: 20px"></i>No. 2-3, Jalan 1/114( Jalan Indrahana 1), Taman Indrahana, Jalan Kuchai Lama</div>
-                        <div class="inform-icon-state" style="display: flex;margin-top: 10px">
-                            <i class="fa-solid fa-map" style="margin-right: 15px"></i>Kuala Lumpur, Malaysia</div>
-                        <div class="office-phone" style="display: flex;margin-top: 10px">
-                            <i class="fa-solid fa-phone" style="margin-right: 15px"></i>Office: +603 7499 3800
+                        <div class="inform-icon-location">
+                        <i class="fa-solid fa-location-dot"></i>No. 2-3, Jalan 1/114( Jalan Indrahana 1), Taman Indrahana, Jalan Kuchai Lama</div>
+                        <div class="inform-icon-state">
+                            <i class="fa-solid fa-map"></i>Kuala Lumpur, Malaysia</div>
+                        <div class="office-phone">
+                            <i class="fa-solid fa-phone"></i>Office: +603 7499 3800
                         </div>
                         <div class="designer-phonecalls">
-                        <i class="fa-solid fa-mobile-screen-button" style="margin-right: 20px"></i>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
                         +6012 332 2831 ( Mr.Chris )<br>
                           +6017 603 5661 ( Mr.Mango )<br>
                         +6012 311 6302 ( Ms.Tiffany )
                         </div>
-                        <div class="mail-box" style="margin-top: 10px">
-                        <i class="fa-solid fa-envelope" style="margin-right: 15px"></i>
+                        <div class="mail-box">
+                        <i class="fa-solid fa-envelope"></i>
                             <a href="info.neointeriors@gmail.com" style="color: white">info.neointeriors@gmail.com</a>
                         </div>
                         </div>
@@ -373,6 +404,34 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("portfolioSlide");
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
