@@ -778,11 +778,11 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
         margin: 50px;
     }
     /*---sec three pic 768px---*/
+    /*---slide pic 768px--*/
     .mySlides img{
         width: 400px;
         padding-right: 50px;
     }
-    /*---slide pic 768px--*/
     /*---slide pic 768px end--*/
     /*---coment 768px---*/
     .designer-comment{

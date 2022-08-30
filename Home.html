@@ -5,14 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Neo Interior SDN BHD</title>
         <meta name="description" content="An interactive getting started guide for Brackets.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">        
-        <script src="https://kit.fontawesome.com/18440a5af0.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/18440a5af0.js" crossorigin="anonymous">
+        </script>
         <style>
         </style>
      </head>
 <body>
      <link rel="stylesheet" href="css/menu%20mobile.css">
     <link rel="stylesheet" href="css/main%20page%20style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
  <header>
      <!--nav bar-->
     <nav class="navbar">
@@ -85,20 +87,19 @@
 <div class="section-one appear2">
 <div class="details-section-one">
 <div class="slideshow-container">
-
-<div class="mySlides fade">
+<div class="mySlides1 fade">
   <img src="picture/1.-1536x864.jpg">
 </div>
 
-<div class="mySlides fade">
+<div class="mySlides1 fade">
   <img src="picture/2-1536x864.jpg">
 </div>
 
-<div class="mySlides fade">
+<div class="mySlides1 fade">
   <img src="picture/3-1536x864.jpg">
 </div>
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
+<a class="prev1" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next1" onclick="plusSlides(1, 0)">&#10095;</a>
 </div>
         <div class="Tittle">
             <div id="tittle-square"><div class="Neo Interior Studio">NEO INTERIOR SDN BHD</div>
@@ -133,6 +134,7 @@
                <div class="more-and-arrow">
                <li><a href="About us.HTML">
                 <img src="picture/more%20arrow.png" width="140px"; height="10px">
+                <p>Click For<br>More</p>
                 </a></li>
                 </div>
                 <div class="small-circle-more">
@@ -239,39 +241,45 @@
                 </div>
             </div>
         </div>
-    
+    <!-- Swiper -->
     <div class="mobile-gallery">
-         <div class="slideshow-portfolioSlide">
-<div class="portfolioSlide fade">
-     <div class="text-text">
+<div class="slideshow-container2">
+  <div class="mySlides2 fade">
+    <div class="text-text">
                 <div class="text-inform-four">RESEDENTIALS</div>
                 <div class="line-box"></div>
                 <p>Tailor-made projects for individual sites or homes of any size, according to the ideas and styles of future residents.</p>
                 </div>
-  <img src="picture/1-1-570x570.jpg">
-</div>
-
-<div class="portfolioSliide fade">
+      <a href="residentials.html" target="_self">
+       <img src="picture/4-2-570x570.jpg">
+      </a>
+  </div>
+  <div class="mySlides2 fade">
     <div class="text-text">
                 <div class="text-inform-four">CORPORATE OFFICE</div>
                 <div class="line-box"></div>
                 <p2>According to functional requirements and planning workspace.</p2>
                 </div>
-  <img src="picture/2-1536x864.jpg">
-</div>
+       <a href="#corporate" target="_self">
+  <img src="picture/1-1-570x570.jpg">
+      </a>
+  </div>
 
-<div class="portfolioSlide fade">
-    <div class="text-text">
+  <div class="mySlides2 fade">
+     <div class="text-text">
                     <div class="text-inform-four">CORMMERCIAL</div>
                     <div class="line-box"></div>
                     <p>For large-scale commercial environments, hotels, clubs and other large-scale environments, we provide tailor-made supply of engineering and furniture.</p>
                     </div>
+      <a href="#cormmercial" target="_self">
   <img src="picture/4-1.jpg">
-</div>
-<a class="prev" onclick="plusSlides(-1)"><img src="picture/arrow-04.png"></a>
-<a class="next" onclick="plusSlides(1)"><img src="picture/arrow-04.png"></a>
-</div>
-    </div>
+      </a>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+        </div>
+        </div>
             </div>
     <div class="section-five">
         <div class="contact-us-bar">
@@ -367,7 +375,7 @@
         </footer>
 </body>
     
-    <script>
+<script>
 let didScroll = false;
 let circlesquare = document.querySelectorAll('.circle-square');
 
@@ -389,35 +397,6 @@ const raf = () => {
 requestAnimationFrame(raf);
 window.addEventListener('scroll', scrollInProgress)
     </script>
-    <script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-    
 <script>
     const items = document.querySelectorAll('.appear2');
 
@@ -435,6 +414,28 @@ const io2 = new IntersectionObserver(active);
     io2.observe(items[i]);
  }
 </script>
-    <script src="css/carousel.js"></script>
+<script src="css/carousel.js"></script>
+    
+     <script>
+        var slideIndex = [1,1];
+var slideId = ["mySlides1","mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+} 
+</script>
 </html>
 

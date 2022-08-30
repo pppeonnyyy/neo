@@ -5,107 +5,197 @@
     <title>
         Load more function Example:2
     </title>
-  
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
-  
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
-    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
   
     <style>
-       
+       .mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
     </style>
 </head>
   
 <body>
-<div id="wowslider-container1">
-<div class="ws_images"><ul>
-		<li><img src="data1/images/cat1183086.jpg" alt="Cat" title="Cat" id="wows1_0"/>Cats are believed to have nine lives</li>
-		<li><img src="data1/images/raccoon365366.jpg" alt="Raccoon" title="Raccoon" id="wows1_1"/>Raccoons are also kept as pets</li>
-		<li><img src="data1/images/redpanda1182069.jpg" alt="Red Panda" title="Red Panda" id="wows1_2"/>Red Pandas feed mainly on bamboo</li>
-		<li><img src="data1/images/zoo1065226.jpg" alt="Fennec fox" title="Fennec fox" id="wows1_3"/>Its distinctive feature is its large ears</li>
-	</ul></div>
-	<div class="ws_bullets"><div>
-		<a href="#" title="Cat"><span><img src="data1/tooltips/cat1183086.jpg" alt="Cat"/>1</span></a>
-		<a href="#" title="Raccoon"><span><img src="data1/tooltips/raccoon365366.jpg" alt="Raccoon"/>2</span></a>
-		<a href="#" title="Red Panda"><span><img src="data1/tooltips/redpanda1182069.jpg" alt="Red Panda"/>3</span></a>
-		<a href="#" title="Fennec fox"><span><img src="data1/tooltips/zoo1065226.jpg" alt="Fennec fox"/>4</span></a>
-	</div></div>
-<div class="ws_shadow"></div>
-</div>
+<!-- Swiper -->
+    <div class="mobile-gallery">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"> 
+            <div class="text-text">
+                    <div class="text-inform-four">CORMMERCIAL</div>
+                    <div class="line-box"></div>
+                    <p>For large-scale commercial environments, hotels, clubs and other large-scale environments, we provide tailor-made supply of engineering and furniture.</p>
+                    </div>
+  <img src="picture/4-1.jpg">
+          </div>
+        <div class="swiper-slide"><div class="text-text">
+                <div class="text-inform-four">CORPORATE OFFICE</div>
+                <div class="line-box"></div>
+                <p2>According to functional requirements and planning workspace.</p2>
+                </div>
+  <img src="picture/2-1536x864.jpg">
+          </div>
+        <div class="swiper-slide"><div class="text-text">
+                <div class="text-inform-four">RESEDENTIALS</div>
+                <div class="line-box"></div>
+                <p>Tailor-made projects for individual sites or homes of any size, according to the ideas and styles of future residents.</p>
+                </div>
+  <img src="picture/1-1-570x570.jpg"></div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
     
-<script type="text/javascript" src="engine1/wowslider.js"></script>
-<script type="text/javascript" src="engine1/script.js"></script>
+<h2 style="text-align:center">Multiple Slideshows</h2>
+
+<p>Slideshow 1:</p>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<p>Slideshow 2:</p>
+<div class="slideshow-container">
+  <div class="mySlides2">
+    <img src="https://www.w3schools.com/howto/img_band_chicago.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="https://www.w3schools.com/howto/img_band_la.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="https://www.w3schools.com/howto/img_band_ny.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+<!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
     <script>
-       // HERO SLIDER
-    var menu = [];
-    jQuery('.swiper-slide').each( function(index){
-        menu.push( jQuery(this).find('.slide-inner').attr("data-text") );
-    });
-    var interleaveOffset = 0.5;
-    var swiperOptions = {
-        loop: true,
-        speed: 1000,
-        parallax: true,
-        autoplay: {
-            delay: 6500,
-            disableOnInteraction: false,
-        },
-        watchSlidesProgress: true,
+      var swiper = new Swiper(".mySwiper", {
         pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+          el: ".swiper-pagination",
+          type: "fraction",
         },
-
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
-
-        on: {
-            progress: function() {
-                var swiper = this;
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    var slideProgress = swiper.slides[i].progress;
-                    var innerOffset = swiper.width * interleaveOffset;
-                    var innerTranslate = slideProgress * innerOffset;
-                    swiper.slides[i].querySelector(".slide-inner").style.transform =
-                    "translate3d(" + innerTranslate + "px, 0, 0)";
-                }      
-            },
-
-            touchStart: function() {
-              var swiper = this;
-              for (var i = 0; i < swiper.slides.length; i++) {
-                swiper.slides[i].style.transition = "";
-              }
-            },
-
-            setTransition: function(speed) {
-                var swiper = this;
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    swiper.slides[i].style.transition = speed + "ms";
-                    swiper.slides[i].querySelector(".slide-inner").style.transition =
-                    speed + "ms";
-                }
-            }
-        }
-    };
-
-    var swiper = new Swiper(".swiper-container", swiperOptions);
-
-    // DATA BACKGROUND IMAGE
-    var sliderBgSetting = $(".slide-bg-image");
-    sliderBgSetting.each(function(indx){
-        if ($(this).attr("data-background")){
-            $(this).css("background-image", "url(" + $(this).data("background") + ")");
-        }
-    });
-
-
+      });
     </script>
+    
+    <script>
+    var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+  </script>
+    
+    <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 </body>
   
 </html>
